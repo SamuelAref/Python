@@ -1,0 +1,798 @@
+Beginner Python Lesson 
+
+    A) Data Types 
+
+        (Basic)
+        
+         int 1,2,3,4
+         str double quotation or single quotation 
+         bool True, False (T and F are capital)
+         float 1.2, 0.3
+
+         Naming conventions 
+
+         - Don't use reserved words
+         - Don't start nameing a variable with a number
+
+
+    B) Basic Operators and Inputs 
+
+           Inputs 
+
+            To input - we use variable = input()
+
+            question = "what is your name"
+                print(question)
+
+                name = input()
+
+                print('nice to meet you ' + name)
+                print('nice to meet you ', name)
+
+
+
+           Basic Operators 
+
+
+                num1 = 2
+                num2 = 4 
+
+                #exponent
+
+                    print(num1 ** num2) 
+
+                #integer division (gives the divisor)
+
+                    print (num2 // num1)
+
+                #modulus
+
+                    print (num2 % num1)
+
+
+
+                conversion data types - Remember to convert you data types 
+
+                  print('pick a number')
+
+                    num1 = int(input())
+
+                    print('pick another number')
+
+                    num2 = int(input())
+
+
+                    print('sum equals = ', num1 + num2) 
+
+
+    C) Conditions   
+
+      IF/ ELIF/ ELSE 
+
+         print('enter your age')
+
+            num1 = int(input())
+
+            if num1 < 2:
+                print('hi')
+
+            elif num1 == 2:
+                print('ho')
+
+            else:
+                print('else')
+
+
+        Chained Conditionals (it's 'and' and 'or' not '&&' and '||' )
+
+            print('person 1 enter your name')
+            name1 = input()
+
+            print('person 2 enter your name')
+
+            name2 = input()
+
+            print('Hello ' + name1 + ' please enter your age')
+            num1 = int(input())
+
+
+            print('Hello ' + name2 + ' please enter your age')
+            num2 = int(input())
+
+
+
+            if num1 > num2 or num2 == 3:
+
+                print(name1+ " is older than " + name2)
+    
+
+    D) Loops
+
+       For Loops
+
+            x = 5
+
+
+            for x in range(10): # python automatically starts from 0 #stop
+
+                print(x)
+
+
+            print('---------')
+
+            for x in range(0,10): #start, stop
+
+                print(x)
+
+
+            print('---------')
+            for x in range(0,10,3): # start, stop, step
+
+                print(x)
+
+       While Loop
+
+        a = 3
+        b = 3
+
+        while a == b:
+            name = input('enter your name or stop to stop')
+
+            if name == 'stop':
+                break
+
+
+    E) Lists And Tuples
+
+     Lists 
+
+        fruits = [ 'apple', 'orange', 5]
+        fruits.append('banana')
+        # fruits.pop()
+        # fruits.remove('banana')
+        fruits.reverse()
+
+        print(fruits)
+
+
+     Tuples 
+
+        position = (1,2)
+        print(position) 
+           
+    
+    F) Iteration by Item
+
+       fruits = [ 'apple', 'banana', 'pears']
+       for x in fruits:
+       print(x)
+
+
+    G) String Methods
+
+       // .strip(), len(), .lower(), .upper(), .split()
+       
+         text = input('write something')
+        # print(text.strip()) // clears the white space before and after the text
+        # text = text.strip()
+        # print(len(text))
+        # print(text.lower())
+        # print(text.upper())
+        print(text.split(',')) #used to split the text into elements separated by the delimiter ('in this case a comma'), then puts it into a list 
+        
+
+    H) Slice Operator
+
+
+        #slice operator
+
+        fruits = ['apples', 'pears','strawberrys']
+        text = 'samuel arefeaynie'
+
+        #slice - [start:stop:step]
+
+        print(text[0:6])
+        print(text[0:]) #beginning to end
+        print(text[ : ]) #also beginning to end
+        print(text[ : : 3]) #beginning to end stepping by 2
+        fruits[2 : 2] = 'b' #to add an element in specific index (2 in this case)
+        
+
+        print(fruits)
+
+        Note: if fruits( : -1) it won't include the last character
+
+
+    I) Functions
+
+      #functions 
+        #Syntax def functionName(parameter)
+
+
+        def addNumbers(x,y):
+            return x + y
+
+
+        print(addNumbers(2,3))
+
+
+    J) How to Read A Text File
+
+        #read
+
+        file = open('read.txt', 'r')
+
+        f = file.readlines()
+
+        newList = []
+
+
+        #this is used to remove the \n
+        # for line in f:
+
+        #     if line[-1] == '\n':
+        #         newList.append(line[ : -1])
+            
+        #     else: 
+        #         newList.append(line)
+
+        # print(f)
+        # print(newList)
+
+
+        #simpler way to remove the \n
+
+        for line in f:
+
+        newList.append(line.strip())
+
+        #always  add file.close()
+
+        file.close()
+
+        print(newList)
+
+    
+    K) Writing To A Text File
+
+        file = open('read.txt', 'w') #but this clears the whole file before writing
+
+        file.write('python \n')
+        file.write('Hello')
+
+        file.close
+
+
+    L) Using .count() and .find()
+
+        #.find() and .count()
+
+        # #.find() , finds and returns index of the first occurence of the value
+
+        # string = 'helllo'
+
+        # print(string.find('l'))
+
+
+        # # .count() , returns the number of occurences of the value
+
+        # print(string.count('l'))
+
+
+
+        #example
+        string = input('enter string')
+
+        if string.count('_') > 0:
+
+            print('not a good password it has underscore')
+
+        else:
+
+            print('good password')
+
+    
+    M) Introduction To Modular Programming
+
+
+        pretty cool, we can create our own modules
+
+        #modules and import statements 
+
+        # import math 
+
+        # print(math.factorial(3))
+        # print(math.pi)
+        # print(math.degrees(math.pi))
+
+        # import own module, create a py file in the directory and import it 
+
+        import myModule
+
+        print(myModule.mymodule(2,3))
+
+
+    N) Optional Parameters
+    
+        #optional operators 
+
+        def func(x = 5, y = 3):
+            print(x , ',' , y)
+
+
+
+        func(1,2)
+
+
+    O) Try and Except (Error Handling)
+
+         # try and except new in python not try and catch
+
+            text = input('username: ')
+
+            try:
+                number = int(text)
+                print(number)
+
+            except:
+
+                print('invalid username')
+
+
+    P) Global vs Local Variables
+
+            text = input('say hi ')
+
+            def func(x):
+
+            global text #to change the global variable text inside the function
+            text = 3
+            t = 5
+
+
+        func(2)
+        print(text)
+
+
+    Q) Classes & Objects
+
+
+        - Everything is a class base 
+           example if x = 'hi'
+           we are creating an instance of the str class with the object x = 'hi'
+           and also if print(x.upper()), we are accessing the upper method in the class str
+
+
+       Creating Class 
+
+            class Dog(object):
+
+                def __init__(self, name, age):
+                    self.name = name
+                    self.age = age
+
+
+                def speak(self):
+                    print('hi, me is ', self.name, 'and i am ', self.age, ' years old')
+
+
+
+
+            tim = Dog('tim', 45)
+            fred = Dog('fred',7)
+
+            tim.speak()
+            fred.speak()
+
+            print(tim.age)
+
+       Inheritance
+
+        #Inheritance
+
+
+        class Dog(object):
+
+            def __init__(self, name, age):
+                self.name = name
+                self.age = age
+
+
+            def speak(self):
+                print('hi, me is ', self.name, 'and i am ', self.age, ' years old')
+
+            def talk(self):
+
+                print('bark')
+
+
+
+
+
+        class Cat(Dog):
+
+            def __init__(self, name, age, color):
+                super().__init__(name, age)
+
+                self.color = color
+
+
+            def talk(self):
+
+                print('meow')
+
+
+
+        tim = Cat('whiskers', 10, 'blue')
+
+        tim.talk()
+
+       Custom Methods
+
+        import math
+
+        class Point(object):
+
+            def __init__(self, x, y):
+
+                self.x = x
+                self.y = y
+                self.coOrd = (self.x, self.y)
+
+            def move(self, x, y):
+
+                self.x +=x
+                self.y +=y
+
+                # print(self.x, self.y)
+
+            def __add__(self, p):
+
+                return Point(self.x + p.x, self.y + p.y)
+
+            def __compare__(self, p):
+
+                c1 = math.sqrt(self.x**2 + self.y**2) 
+                c2 = math.sqrt(p.x**2 + p.y**2) 
+
+                if c1 < c2 :
+
+                    return Point(self.x, self.y)
+
+                elif c2 < c1:
+
+                    return Point(p.x,p.y) 
+
+                else :
+
+                    return 'they are equal'  
+
+
+            def __str__(self):  #to convert the output to a string and output it
+
+                return "(" + str(self.x) + ',' + str(self.y) + ')'
+
+        point1 = Point(2,3)
+        point2 = Point(4,3)
+        point3 = point1 + point2
+
+        # point1.move(1,4)
+
+        # print(point1.__add__(point2))
+        # print(point3)
+
+        print(point1.__compare__(point2))
+  
+       @classmethod and @staticmethod
+
+            @ are decorators it specifies the kind of method you are creating
+
+            @class method, creates a normal method where you can access all the attributes in the class 
+            @staticmethod, creates an independant method that can't access other class attributes 
+
+
+            Example
+
+            
+                class Dog:
+
+                    dogs = []
+
+                    def __init__(self,name):
+
+                        self.name = name
+
+                        self.dogs.append(self)
+
+
+                    @classmethod
+                    def num_dogs(cls):
+                        return len(cls.dogs)
+
+                    
+                    @staticmethod
+                    def bark(n):
+                        """barks n times"""
+                        for _ in range(n):
+                            print("Bark!")
+
+                # mike = Dog('mike')
+                # jim = Dog('jim')
+
+                # Dog.num_dogs() //class method
+
+                # Dog.bark(5) //static class
+        
+       Public and Private classes
+
+        To make the class or method as private we use an underscore before the name
+        Note- this doesn't mean that it is actually private you can access it from anywher, but it's just to notify that it identifies as private enji not like java (there are no actual private class or methods)
+
+        Example 
+
+            class _ItsPrivate:
+
+             def __init__(self, name):
+                self.name = name 
+
+
+
+
+            class AintPrivate:
+
+                def __init__(self, name) -> None:
+                    self.name = name 
+                    self.priv = _ItsPrivate(name)
+
+
+                def _display(self):
+
+                    print("Hello")
+
+                def display(self):
+
+                    print('Hi')
+
+
+Intermediate Python Lesson 
+
+
+    A) Optional Parameters
+
+        Example 
+
+        def func(word , freq = 3):
+
+        return (word * freq)
+
+        call = func('tim')
+        print(call)
+
+
+    B) Map Function & Comprehension 
+
+     #Extremely helpful, they both do the same thing
+
+        #map function 
+
+        li = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        def func(x):
+
+            return x**x
+
+
+        print(list(map(func, li)))
+
+
+        #list comprehension
+
+        print([func(x) for x in li]) # you can add if statement if you want
+
+
+    C) Filter Functions 
+
+
+        #these are also very usefull
+
+        example 
+
+            def add7(x):
+
+                return x + 7
+
+
+            def isOdd(x):
+
+                return x % 2 != 0
+
+            a  = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+            b = list(filter(isOdd, a))
+
+            c = list(map(add7, filter(isOdd, a)))
+
+            print(b)
+            print(c)
+
+
+    D) Lambda Functions 
+
+
+
+     #Lambda 
+        # used when one return value is used
+        # def func(x):
+            
+        #     func2 = lambda x : x + 5
+        #     return func2(x) + 2
+
+
+        # # func2 = lambda x : x + 5
+        # func3 = lambda x, y : x + y 
+
+        # print(func3(2,3))
+
+        # print(func(3))
+
+
+        a = [ 1, 2, 3, 4, 5]
+
+
+        newList = list(filter(lambda x : x < 3, a))
+
+        print(newList)
+
+
+    E) Collections
+
+        
+        Collections - ( list, set, dict, tuple-imuttable)
+
+
+        I) Counter
+
+            First we import counter 
+
+            examples 
+
+                import collections
+                from collections import Counter
+
+
+                # c = Counter('gallad') #list
+                # print(c)
+                # c = Counter(['a', 'a', 'b', 'c','c']) #set
+                # print(c)
+
+                # c = Counter({ 'a':1, "b":2}) #dictionary
+                # print(c)
+
+                # c = Counter(cats = 4, dogs = 7) # tuple
+                # print(c)
+
+
+                #methods 
+
+                # print(list(c.elements())) #lists the amount of elements
+                # print(c.most_common(1)) #returns the most common elements
+
+                c = Counter(a = 4, b = 2, c = 0, d = -2)
+                d = ['a', 'b', 'b', 'c']
+                # c.subtract(d) #subtracts elements
+                # c.update(d) #adds elements
+                # c.clear() #removes all of the elements 
+                #  c + d, c - d
+                # c & d # intersection like sets
+                # c | d # union
+
+                print(c)
+
+        II) Named Tuple
+
+            Named tuples are similar to normal tuples but are named for easier acess 
+
+            Example 
+
+                import collections
+
+                from collections import namedtuple
+
+
+                Point = namedtuple('Point', 'x y z') # breaks up the string to 3 parameters
+                # also works with object parameters like list or dictionary
+
+                newPoint = Point (3, 4, 5)
+
+
+                print(newPoint)
+                print(newPoint.x) #individual elements
+                print(newPoint._fields) 
+                print(newPoint._asdict)
+
+        III) Deque
+
+            import collections
+            from collections import deque
+
+            d = deque("hello")
+            d = deque("hello", maxlen=5) #you can limit the length, so that items inserted will replace the elements
+
+
+            d.append('4')
+            d.appendleft('a')
+            d.pop()
+            d.popleft()
+            d.clear()
+            d.extend([1,2,3]) # used to add lists inside, note that it is extending
+            d.rotate(-1) #rotates the elment to left if it is negative and right if it is positive
+            
+            print(d)
+
+
+Expert Python Tutorial
+
+
+    A) How Python code works 
+
+      Compiler - takes high level code and translates it to a low level code 
+      Translator - Translates our code to a byte code 
+      python runs at run time not compile time 
+      
+      # we can also import inspect then inspect our code accordingly
+      Example 
+
+            def make_class(x):
+
+            class Dog:
+
+                def __init__(self, name):
+
+                    self.name = name 
+
+                def print_value(self):
+
+                    print(x)
+
+
+            return Dog
+
+
+
+        cls = make_class(10)
+
+        d = cls('sami')
+        d.print_value() 
+
+
+    B) Dunder/ Magic Methods
+
+
+        Example
+
+            #dunder methods ( double underscore methods) allows us to express the object into various forms , in our example we used it to convert into string form 
+            class Person:
+
+                def __init__(self,name):
+
+                    self.name = name 
+
+                def __repr__(self): #dunder
+
+                    return self.name
+
+                def __mul__(self, x):
+
+                    if type(x) is not int:
+
+                        raise Exception("Invalid argument")
+
+                    self.name = self.name * x
+
+
+            p = Person("tim")
+            p * 4
+            print(p)
+
+
+    C) Metaclasses

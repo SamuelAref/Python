@@ -1,0 +1,143 @@
+Timer 
+
+   
+    # Stop watch 
+    # what do we need 
+
+        #Timer 
+        #setting timer
+        #lets try while loop
+
+
+
+            counter = 0
+
+            while counter == 0:
+
+                print('Timer : 00:00')
+                response = input('input timer? y/n')
+
+                if response == 'y':
+
+                setTimer = int(input('set timer in seconds'))
+                print(setTimer, ':00')
+
+                while(setTimer != 0):
+
+                    
+                    setTimer = setTimer - 1
+                    print(setTimer)
+                
+
+
+                elif response == 'n':
+
+                    counter = counter + 1
+
+                else:
+
+                    print('please enter a valid response')
+
+
+Rock Paper scissors minimal
+
+    # Rock paper Scissors
+
+    #we need conditionals 
+    import random
+
+
+    n = random.randint(0, 2)
+    print(n)
+
+
+    rock = 'r'
+    paper = 'p'
+    scissors = 's'
+
+    computerAttributes = [ 'r', 'p', 's']
+
+    computerValue = computerAttributes[n]
+
+    inputChecker = 0
+    print(computerValue)
+
+
+
+    while inputChecker == 0:
+
+        human = input('rock, paper or scissor? r/p/s')
+
+        if human == 'r' or human == 'p' or human == 's':
+
+            if human == computerValue:
+
+                print("it's a tie" + computerValue + " vs " + human)
+
+            elif human == paper and computerValue == scissors:
+
+                print(human + " vs " + computerValue + " :" + computerValue + " wins")
+
+            elif human == scissors and computerValue == paper:
+
+                print(human + " vs " + computerValue + " :" + human + " wins")
+
+        else:
+            
+            print('pleas input the correct command')
+
+
+Guessing game (user guesses)
+
+    #Number guessing game
+    
+            import random
+
+            randomNum = random.randint(0,10)
+            # print(randomNum)
+
+            guessCounter = 3
+
+
+            while guessCounter !=0:
+
+                userGuess = int(input('guess a number'))
+
+                if userGuess == randomNum:
+                    print('you win')
+                    break
+
+                else:
+
+                    if guessCounter == 1:
+                        print('you lose')
+                        guessCounter-=1
+
+                    else:
+                        print('guess again')
+                        guessCounter-=1
+
+
+Very simple password checker 
+
+
+        #rules of the password are 
+
+        #1 must contain letters (may be not)
+        #2 must contain numbers
+        #3 must contain special characters
+
+        validation = False
+
+        while validation == False:
+            userPassword = input('Please enter your password :  ')
+
+            if userPassword.count('0') == 0 and userPassword.count('1') == 0 and userPassword.count('2') == 0 and userPassword.count('3') == 0 and userPassword.count('4') == 0 and userPassword.count('5') == 0 and userPassword.count('6') == 0 and userPassword.count('7') == 0 and userPassword.count('8') == 0 and userPassword.count('9') == 0:
+                print('please include a number')
+
+            elif userPassword.count('_') == 0 and userPassword.count('-') == 0 and userPassword.count('@') == 0:
+                print('please include special characters')
+                print("special characters include '_', '@' or '-'")
+
+            else:
+                validation = True
